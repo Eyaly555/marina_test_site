@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Premium Color Palette */
+  --color-primary: #0d9488;
+  --color-primary-light: #14b8a6;
+  --color-primary-dark: #0f766e;
+  --color-primary-gradient: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
+
+  --color-secondary: #f59e0b;
+  --color-secondary-light: #fbbf24;
+  --color-secondary-dark: #d97706;
+  --color-secondary-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+
+  /* Neutral Tones */
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
+  --color-text-muted: #94a3b8;
+
+  /* Backgrounds */
+  --color-background: #ffffff;
+  --color-background-warm: #fefdfb;
+  --color-background-alt: #f8fafc;
+  --color-background-dark: #0f172a;
+  --color-background-darker: #020617;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(13, 148, 136, 0.15);
+
+  /* Typography */
+  --font-family-base: 'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-display: 'Rubik', sans-serif;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.3);
+  --shadow-glow-orange: 0 0 40px rgba(245, 158, 11, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

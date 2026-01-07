@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Skill(frontend-design)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
