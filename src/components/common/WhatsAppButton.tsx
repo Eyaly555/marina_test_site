@@ -4,7 +4,7 @@ import './WhatsAppButton.css'
 
 export default function WhatsAppButton() {
     const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '972546886606'
-    const message = 'שלום, אני מעוניין/ת לקבל מידע נוסף על שיעורים במרכז אריאדנה'
+    const message = 'Здравствуйте, я хотел(а) бы получить информацию о занятиях в Центре Ариадна'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     return (
@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
             <div className="whatsapp-icon">
                 <MessageCircle size={28} />
             </div>
-            <span className="whatsapp-tooltip">דברו איתנו בוואטסאפ</span>
+            <span className="whatsapp-tooltip">Напишите нам в WhatsApp</span>
         </motion.a>
     )
 }

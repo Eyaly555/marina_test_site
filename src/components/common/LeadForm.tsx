@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle2, ArrowLeft, Phone } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Phone } from 'lucide-react'
 import './LeadForm.css'
 
 const gradeOptions = [
-    "א'", "ב'", "ג'", "ד'", "ה'", "ו'",
-    "ז'", "ח'", "ט'", "י'", "יא'", "יב'",
+    '1 класс', '2 класс', '3 класс', '4 класс', '5 класс', '6 класс',
+    '7 класс', '8 класс', '9 класс', '10 класс', '11 класс', '12 класс',
 ]
 
 const subjectOptions = [
-    'מתמטיקה', 'אנגלית', 'לשון', 'היסטוריה',
-    'פיזיקה', "הכנה לכיתה א'", 'מדעי המחשב', 'אזרחות',
+    'Математика', 'Английский', 'Иврит', 'История',
+    'Физика', 'Подготовка к 1 классу', 'Информатика', 'Граждановедение',
 ]
 
 interface LeadFormProps {
@@ -25,11 +25,11 @@ interface LeadFormProps {
 
 export default function LeadForm({
     variant = 'card',
-    title = 'הרשמה לשיעור ראשון',
-    subtitle = 'מלאו את הפרטים ונחזור אליכם תוך 24 שעות',
-    buttonText = 'קבע שיעור ניסיון חינם',
-    badgeText = 'שיעור ניסיון חינם',
-    disclaimerText = 'ללא התחייבות, ללא עלות',
+    title = 'Запись на первое занятие',
+    subtitle = 'Заполните данные, и мы свяжемся с вами в течение 24 часов',
+    buttonText = 'Записаться на бесплатную консультацию',
+    badgeText = 'Бесплатная консультация',
+    disclaimerText = 'Без обязательств, бесплатно',
     showBadge = true,
 }: LeadFormProps) {
     const [formData, setFormData] = useState({
@@ -71,7 +71,7 @@ export default function LeadForm({
             setIsSubmitted(true)
         } catch {
             console.error('Form submission failed')
-            setError('אירעה שגיאה, נסו שנית או התקשרו אלינו')
+            setError('Произошла ошибка, попробуйте еще раз или позвоните нам')
         } finally {
             setIsSubmitting(false)
         }
@@ -88,8 +88,8 @@ export default function LeadForm({
                     <div className="success-icon">
                         <CheckCircle2 size={48} />
                     </div>
-                    <h3>תודה רבה!</h3>
-                    <p>קיבלנו את הפרטים שלכם ונחזור אליכם בהקדם</p>
+                    <h3>Большое спасибо!</h3>
+                    <p>Мы получили ваши данные и свяжемся с вами в ближайшее время</p>
                 </div>
             </motion.div>
         )
@@ -113,17 +113,17 @@ export default function LeadForm({
             <form onSubmit={handleSubmit} className="lead-form">
                 <div className="form-row">
                     <div className="form-group">
-                        <label>שם ההורה</label>
+                        <label>Имя родителя</label>
                         <input
                             type="text"
-                            placeholder="השם שלך"
+                            placeholder="Ваше имя"
                             value={formData.parentName}
                             onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label>טלפון</label>
+                        <label>Телефон</label>
                         <input
                             type="tel"
                             placeholder="050-000-0000"
@@ -136,23 +136,23 @@ export default function LeadForm({
 
                 <div className="form-row">
                     <div className="form-group">
-                        <label>שם הילד/ה</label>
+                        <label>Имя ребенка</label>
                         <input
                             type="text"
-                            placeholder="שם הילד/ה"
+                            placeholder="Имя ребенка"
                             value={formData.childName}
                             onChange={(e) => setFormData({ ...formData, childName: e.target.value })}
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label>כיתה</label>
+                        <label>Класс</label>
                         <select
                             value={formData.grade}
                             onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
                             required
                         >
-                            <option value="">בחר כיתה</option>
+                            <option value="">Выберите класс</option>
                             {gradeOptions.map((g) => (
                                 <option key={g} value={g}>{g}</option>
                             ))}
@@ -161,13 +161,13 @@ export default function LeadForm({
                 </div>
 
                 <div className="form-group form-group-full">
-                    <label>מקצוע מבוקש</label>
+                    <label>Предмет</label>
                     <select
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         required
                     >
-                        <option value="">בחר מקצוע</option>
+                        <option value="">Выберите предмет</option>
                         {subjectOptions.map((s) => (
                             <option key={s} value={s}>{s}</option>
                         ))}
@@ -187,7 +187,7 @@ export default function LeadForm({
                         <>
                             <Phone size={18} />
                             <span>{buttonText}</span>
-                            <ArrowLeft size={18} />
+                            <ArrowRight size={18} />
                         </>
                     )}
                 </button>

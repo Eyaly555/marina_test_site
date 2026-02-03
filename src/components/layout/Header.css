@@ -311,7 +311,7 @@
     color: var(--color-text);
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
-    text-align: right;
+    text-align: left;
     background: none;
     border: none;
     cursor: pointer;

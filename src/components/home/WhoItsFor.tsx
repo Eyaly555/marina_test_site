@@ -3,18 +3,18 @@ import { CheckCircle2, XCircle } from 'lucide-react'
 import './WhoItsFor.css'
 
 const suitableFor = [
-    'תהליך חינוכי איכותי',
-    'צוות מקצועי',
-    'תוצאות לטווח ארוך',
-    'שקט נפשי בבית',
-    'אונליין או הגעה לראשון לציון',
+    'Качественный образовательный процесс',
+    'Профессиональную команду',
+    'Результаты для долгосрочной перспективы',
+    'Душевное спокойствие дома',
+    'Онлайн или приезд в Ришон-ле-Цион',
 ]
 
 const notSuitableFor = [
-    'מי שמחפש פתרון מהיר וזול',
-    'מי שלא מוכן לאונליין ולא יכול להגיע לראשון לציון',
-    'מי שמחפש טיפול רגשי או פסיכולוגי',
-    'מי שהילד שלו לא פנוי לתהליך למידה',
+    'Ищет быстрое и дешевое решение',
+    'Не готов к онлайн и не может приехать в Ришон-ле-Цион',
+    'Хочет записать ребенка на психологическую или эмоциональную терапию',
+    'Понимает, что ребенок в данный момент не готов начать обучение',
 ]
 
 export default function WhoItsFor() {
@@ -27,17 +27,17 @@ export default function WhoItsFor() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2>למי זה מתאים ולמי לא?</h2>
+                    <h2>Для кого это подходит, а для кого нет?</h2>
                 </motion.div>
 
                 <div className="who-grid">
                     <motion.div
                         className="who-card suitable"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h3>מתאים להורים שמחפשים:</h3>
+                        <h3>Подходит для родителей, которые ищут:</h3>
                         <ul>
                             {suitableFor.map((item, i) => (
                                 <li key={i}>
@@ -50,12 +50,12 @@ export default function WhoItsFor() {
 
                     <motion.div
                         className="who-card not-suitable"
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        <h3>לא מתאים ל:</h3>
+                        <h3>Не подходит для тех, кто:</h3>
                         <ul>
                             {notSuitableFor.map((item, i) => (
                                 <li key={i}>

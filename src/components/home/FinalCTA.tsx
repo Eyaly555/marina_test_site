@@ -17,26 +17,26 @@ export default function FinalCTA() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2>בואו נראה אם אנחנו מתאימים<br />לילד/ה שלכם</h2>
+                    <h2>Давайте посмотрим, подходим ли мы<br />вашему ребенку</h2>
                     <p className="final-cta-subtitle">
-                        שיחת טלפון קצרה וחינמית - נבין את המצב ונראה איך אנחנו יכולים לעזור
+                        Короткий бесплатный телефонный звонок - поймем ситуацию и посмотрим, как мы можем помочь
                     </p>
 
                     <div className="final-cta-form">
                         <LeadForm
                             variant="dark"
-                            buttonText="קבעו שיחת יעוץ חינמית"
+                            buttonText="Запишитесь на бесплатную консультацию"
                         />
                     </div>
 
                     <div className="final-cta-notes">
                         <div className="cta-note">
                             <Phone size={16} />
-                            <span>השיחה אורכת 15-20 דקות | ללא התחייבות</span>
+                            <span>Звонок длится 15-20 минут | Без обязательств</span>
                         </div>
                         <div className="cta-note warning">
                             <AlertTriangle size={16} />
-                            <span>אנחנו מתמחים בליווי לטווח ארוך. שיעורים פרונטליים רק בראשון לציון.</span>
+                            <span>Мы специализируемся на долгосрочном сопровождении. Фронтальные занятия только в Ришон-ле-Ционе.</span>
                         </div>
                     </div>
                 </motion.div>

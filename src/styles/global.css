@@ -20,7 +20,7 @@ html {
 
 body {
   min-height: 100vh;
-  direction: rtl;
+  direction: ltr;
   font-family: var(--font-family-base);
   font-weight: 400;
   color: var(--color-text);

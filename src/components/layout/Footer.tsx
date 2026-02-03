@@ -12,13 +12,13 @@ export default function Footer() {
     }
 
     const quickLinks = [
-        { id: 'hero', label: 'דף הבית' },
-        { id: 'problems', label: 'הבעיה והפתרון' },
-        { id: 'how-it-works', label: 'איך זה עובד' },
-        { id: 'testimonials', label: 'המלצות' },
-        { id: 'about', label: 'עלינו' },
-        { id: 'faq', label: 'שאלות נפוצות' },
-        { id: 'contact', label: 'צור קשר' },
+        { id: 'hero', label: 'Главная' },
+        { id: 'problems', label: 'Проблема и решение' },
+        { id: 'how-it-works', label: 'Как это работает' },
+        { id: 'testimonials', label: 'Отзывы' },
+        { id: 'about', label: 'О нас' },
+        { id: 'faq', label: 'Вопросы' },
+        { id: 'contact', label: 'Контакты' },
     ]
 
     return (
@@ -29,14 +29,14 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="footer-col footer-brand">
                         <button onClick={() => scrollToSection('hero')} className="footer-logo">
-                            <img src="/logo.jpg" alt="מרכז למידה אריאדנה" className="footer-logo-img" />
+                            <img src="/logo.jpg" alt="Центр Ариадна" className="footer-logo-img" />
                             <div className="footer-logo-text">
-                                <span className="logo-main">אריאדנה</span>
-                                <span className="logo-sub">מרכז למידה</span>
+                                <span className="logo-main">Ариадна</span>
+                                <span className="logo-sub">Центр обучения</span>
                             </div>
                         </button>
                         <p className="footer-description">
-                            לא עוד מורה פרטי - מערכת שלמה לכל המקצועות. מרכז למידה מוביל בראשון לציון ואונליין.
+                            Не просто репетитор - комплексная система обучения по всем предметам. Ведущий центр обучения в Ришон-ле-Ционе и онлайн.
                         </p>
                         <div className="footer-social">
                             <a href="#" aria-label="Facebook">
@@ -53,7 +53,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div className="footer-col">
-                        <h4>ניווט מהיר</h4>
+                        <h4>Быстрая навигация</h4>
                         <ul className="footer-links">
                             {quickLinks.map((link) => (
                                 <li key={link.id}>
@@ -67,31 +67,31 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div className="footer-col">
-                        <h4>צרו קשר</h4>
+                        <h4>Свяжитесь с нами</h4>
                         <ul className="contact-list">
                             <li>
                                 <div className="contact-icon">
                                     <MapPin size={16} />
                                 </div>
-                                <span>יעקב פריימן 20, א.ת ישן, ראשל"צ</span>
+                                <span>Ришон-ле-Цион</span>
                             </li>
                             <li>
                                 <div className="contact-icon">
                                     <Phone size={16} />
                                 </div>
-                                <a href="tel:054-688-6606">054-688-6606</a>
+                                <a href="tel:050-123-4567">050-123-4567</a>
                             </li>
                             <li>
                                 <div className="contact-icon">
                                     <Mail size={16} />
                                 </div>
-                                <a href="mailto:info@ariadna-center.com">info@ariadna-center.com</a>
+                                <a href="mailto:info@ariadna-center.co.il">info@ariadna-center.co.il</a>
                             </li>
                         </ul>
                         <div className="footer-hours">
-                            <h5>שעות פעילות</h5>
-                            <p>ראשון - חמישי: 14:00 - 21:00</p>
-                            <p>שישי: 09:00 - 13:00</p>
+                            <h5>Часы работы</h5>
+                            <p>Воскресенье - Четверг: 14:00 - 21:00</p>
+                            <p>Пятница: 09:00 - 13:00</p>
                         </div>
                     </div>
                 </div>
@@ -101,10 +101,10 @@ export default function Footer() {
             <div className="footer-bottom">
                 <div className="container footer-bottom-content">
                     <p className="copyright">
-                        &copy; {new Date().getFullYear()} מרכז למידה אריאדנה. כל הזכויות שמורות.
+                        &copy; {new Date().getFullYear()} Центр Ариадна. Все права защищены.
                     </p>
                     <p className="made-with">
-                        נבנה עם <Heart size={14} fill="#ef4444" color="#ef4444" /> בישראל
+                        Сделано с <Heart size={14} fill="#ef4444" color="#ef4444" /> в Израиле
                     </p>
                 </div>
             </div>

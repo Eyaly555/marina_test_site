@@ -2,11 +2,9 @@ import { motion } from 'framer-motion'
 import './Results.css'
 
 const results = [
-    { image: '/test1.jpg', caption: 'תלמיד כיתה ח\' - 95 במתמטיקה' },
-    { image: '/test2.jpg', caption: 'תלמידת כיתה ט\' - 92 באנגלית' },
-    { image: '/test3.jpg', caption: 'תלמיד כיתה יא\' - 98 בפיזיקה' },
-    { image: '/test4.jpg', caption: 'תלמידת כיתה י\' - 90 בלשון' },
-    { image: '/test5.jpg', caption: 'תלמיד כיתה יב\' - 96 במתמטיקה' },
+    { image: '/test1.jpg', caption: 'Ученик 8 класса - 95 по математике' },
+    { image: '/test2.jpg', caption: 'Ученица 9 класса - 92 по английскому' },
+    { image: '/test3.jpg', caption: 'Ученик 11 класса - 98 по физике' },
 ]
 
 export default function Results() {
@@ -19,7 +17,7 @@ export default function Results() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2>התוצאות מדברות בעד עצמן</h2>
+                    <h2>Результаты говорят сами за себя</h2>
                 </motion.div>
 
                 <div className="results-grid">

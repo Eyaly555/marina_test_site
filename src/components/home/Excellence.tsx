@@ -4,9 +4,9 @@ import LeadForm from '../common/LeadForm'
 import './Excellence.css'
 
 const stats = [
-    { icon: GraduationCap, value: '2,750+', label: 'בוגרים שהגיעו להישגים מרשימים וסגרו פערי לימוד' },
-    { icon: CheckCircle2, value: 'התאמה מלאה', label: 'תוכנית הלימודים מסונכרנת עם דרישות משרד החינוך' },
-    { icon: Rocket, value: 'ארגז כלים לעתיד', label: 'מתמטיקה, שפות וטכנולוגיה (תכנות) – הכל תחת קורת גג אחת' },
+    { icon: GraduationCap, value: '2,750+', label: 'выпускников добились впечатляющих результатов и преодолели учебные пробелы' },
+    { icon: CheckCircle2, value: 'Полная адаптация', label: 'Учебная программа синхронизирована с требованиями Министерства образования' },
+    { icon: Rocket, value: 'Инструменты для будущего', label: 'Математика, языки и технологии (программирование) - все под одной крышей' },
 ]
 
 export default function Excellence() {
@@ -19,9 +19,9 @@ export default function Excellence() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2>מצוינות לימודית מתחילה כאן: מרכז אריאדנה</h2>
+                    <h2>Уверенность в себе и установка на успех закладываются в центре Ариадна</h2>
                     <p className="excellence-subtitle">
-                        מחפשים תוצאות? הגעתם למקום הנכון. עם ניסיון חינוכי עשיר שהחל עוד ב-2008, מרכז אריאדנה מציע שילוב מנצח בין מקצועיות ללא פשרות לבין ליווי רגשי מעצים.
+                        Вам важно развить у ребенка уверенность в себе? Вы обратились по адресу. Центр Ариадна с 2008 года объединяет высокие образовательные стандарты с заботой об эмоциональном состоянии учеников.
                     </p>
                 </motion.div>
 
@@ -50,7 +50,7 @@ export default function Excellence() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    הופכים פוטנציאל להצלחה מוכחת. הצטרפו למשפחת אריאדנה.
+                    Превращаем потенциал в доказанный успех. Присоединяйтесь к семье Ариадна.
                 </motion.p>
 
                 <motion.div
@@ -59,7 +59,7 @@ export default function Excellence() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <LeadForm variant="card" title="הצטרפו למשפחת אריאדנה" subtitle="מלאו פרטים ונחזור אליכם תוך 24 שעות" />
+                    <LeadForm variant="card" title="Присоединяйтесь к семье Ариадна" subtitle="Заполните данные, и мы свяжемся с вами в течение 24 часов" />
                 </motion.div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Star, AlertTriangle, MapPin } from 'lucide-react'
+import { Star, AlertTriangle, MapPin, Users, Clock } from 'lucide-react'
 import LeadForm from '../common/LeadForm'
 import './Hero.css'
 
@@ -30,7 +30,7 @@ export default function Hero() {
             </div>
 
             <div className="container hero-container">
-                {/* Right Content (RTL) */}
+                {/* Left Content (LTR) */}
                 <motion.div
                     className="hero-content"
                     initial={{ opacity: 0, x: -50 }}
@@ -38,27 +38,46 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="hero-title">
-                        <span className="title-line">הילד שלכם מתקשה בלימודים</span>
-                        <span className="title-line-sub">למרות שכבר ניסיתם מורה פרטי?</span>
+                        <span className="title-line">{"\u00AB"}Пробовали заниматься с 3 репетиторами. Ничего не помогло.{"\u00BB"}</span>
                     </h1>
 
                     <p className="hero-description">
-                        גם אם ניסיתם כבר 3 מורים פרטיים - אנחנו יודעים למה זה לא עבד.
+                        Именно с этими словами к нам обращаются родители. В центре Ариадна они понимают, почему не получалось раньше и что действительно работает.
                     </p>
 
-                    <div className="hero-tagline">
-                        <span className="tagline-brand">מרכז אריאדנה</span>
-                        <span className="tagline-text"> - לא עוד מורה פרטי, מערכת שלמה לכל המקצועות.</span>
+                    <div className="hero-stats">
+                        <div className="hero-stat">
+                            <Users size={20} />
+                            <div>
+                                <strong>2,750+</strong>
+                                <span>учеников преуспели</span>
+                            </div>
+                        </div>
+                        <div className="hero-stat">
+                            <Clock size={20} />
+                            <div>
+                                <strong>18</strong>
+                                <span>лет опыта</span>
+                            </div>
+                        </div>
+                        <div className="hero-stat">
+                            <div className="review-stars-mini">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star key={i} size={14} fill="#f59e0b" color="#f59e0b" />
+                                ))}
+                            </div>
+                            <span>отзывы в Google</span>
+                        </div>
                     </div>
 
                     <div className="hero-notes">
                         <div className="hero-note">
                             <AlertTriangle size={16} />
-                            <span>אנחנו מתמחים בליווי לטווח ארוך</span>
+                            <span>Мы предлагаем комплексную систему для долгосрочного обучения</span>
                         </div>
                         <div className="hero-note">
                             <MapPin size={16} />
-                            <span>פרונטלי רק בראשון לציון או אונליין בכל הארץ</span>
+                            <span>Онлайн или фронтально в Ришон-ле-Ционе</span>
                         </div>
                     </div>
 
@@ -68,11 +87,11 @@ export default function Hero() {
                                 <Star key={i} size={20} fill="#f59e0b" color="#f59e0b" />
                             ))}
                         </div>
-                        <span className="review-text">ביקורות מצוינות בגוגל</span>
+                        <span className="review-text">отличные отзывы в Google</span>
                     </div>
                 </motion.div>
 
-                {/* Left Form */}
+                {/* Right Form */}
                 <motion.div
                     className="hero-form-wrapper"
                     initial={{ opacity: 0, x: 50 }}
@@ -92,7 +111,7 @@ export default function Hero() {
                 <div className="scroll-mouse">
                     <div className="scroll-wheel" />
                 </div>
-                <span>גלול למטה</span>
+                <span>Прокрутите вниз</span>
             </motion.div>
         </section>
     )

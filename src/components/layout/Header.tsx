@@ -28,12 +28,12 @@ export default function Header() {
     }
 
     const navLinks = [
-        { id: 'hero', label: 'דף הבית' },
-        { id: 'problems', label: 'הבעיה והפתרון' },
-        { id: 'how-it-works', label: 'איך זה עובד' },
-        { id: 'testimonials', label: 'המלצות' },
-        { id: 'about', label: 'עלינו' },
-        { id: 'faq', label: 'שאלות נפוצות' },
+        { id: 'hero', label: 'Главная' },
+        { id: 'problems', label: 'Проблема и решение' },
+        { id: 'how-it-works', label: 'Как это работает' },
+        { id: 'testimonials', label: 'Отзывы' },
+        { id: 'about', label: 'О нас' },
+        { id: 'faq', label: 'Вопросы' },
     ]
 
     return (
@@ -42,25 +42,25 @@ export default function Header() {
             <div className="top-bar">
                 <div className="container top-bar-content">
                     <div className="contact-info">
-                        <a href="tel:054-688-6606" className="contact-item">
+                        <a href="tel:050-123-4567" className="contact-item">
                             <div className="contact-icon">
                                 <Phone size={14} />
                             </div>
-                            <span>054-688-6606</span>
+                            <span>050-123-4567</span>
                         </a>
                         <div className="divider" />
-                        <a href="mailto:info@ariadna-center.com" className="contact-item">
+                        <a href="mailto:info@ariadna-center.co.il" className="contact-item">
                             <div className="contact-icon">
                                 <Mail size={14} />
                             </div>
-                            <span>info@ariadna-center.com</span>
+                            <span>info@ariadna-center.co.il</span>
                         </a>
                         <div className="divider" />
                         <span className="contact-item location">
                             <div className="contact-icon">
                                 <MapPin size={14} />
                             </div>
-                            <span>ראשון לציון</span>
+                            <span>Ришон-ле-Цион</span>
                         </span>
                     </div>
                     <div className="social-icons">
@@ -81,10 +81,10 @@ export default function Header() {
             <div className="main-nav-container">
                 <div className="container nav-content">
                     <button onClick={() => scrollToSection('hero')} className="logo">
-                        <img src="/logo.jpg" alt="מרכז למידה אריאדנה" className="logo-image" />
+                        <img src="/logo.jpg" alt="Центр Ариадна" className="logo-image" />
                         <div className="logo-text">
-                            <span className="logo-main">אריאדנה</span>
-                            <span className="logo-sub">מרכז למידה</span>
+                            <span className="logo-main">Ариадна</span>
+                            <span className="logo-sub">Центр обучения</span>
                         </div>
                     </button>
 
@@ -106,7 +106,7 @@ export default function Header() {
 
                     <div className="header-cta">
                         <button onClick={() => scrollToSection('contact')} className="cta-button">
-                            <span>שיחת יעוץ חינמית</span>
+                            <span>Бесплатная консультация</span>
                             <div className="cta-shine" />
                         </button>
                     </div>
@@ -151,7 +151,7 @@ export default function Header() {
                                 className="mobile-cta"
                                 onClick={() => scrollToSection('contact')}
                             >
-                                קבעו שיחת יעוץ חינמית
+                                Запишитесь на бесплатную консультацию
                             </button>
                         </nav>
                     </motion.div>

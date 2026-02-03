@@ -17,10 +17,10 @@ export default function ResearchQuote() {
                         <BookOpen size={32} />
                     </div>
                     <blockquote className="research-quote">
-                        "מחקרים מראים שחוויות של הצלחה או כישלון בבית הספר משפיעות בצורה משמעותית על התפתחות תחושת המסוגלות והביטחון העצמי האקדמי של הילדים"
+                        "Исследования подтверждают: Успехи или неудачи в школе напрямую влияют на самооценку ребенка и его веру в свой потенциал."
                     </blockquote>
                     <cite className="research-cite">
-                        Chapman, Turner & Prochnow, 2000 - מאמר סקירה על תפיסה עצמית אקדמית אצל ילדים
+                        Chapman, Turner & Prochnow, 2000 - обзорная статья об академической самооценке у детей
                     </cite>
                 </motion.div>
             </div>

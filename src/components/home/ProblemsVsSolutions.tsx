@@ -3,21 +3,21 @@ import { XCircle, CheckCircle2 } from 'lucide-react'
 import './ProblemsVsSolutions.css'
 
 const problems = [
-    'הילד לא מבין את החומר בכיתה',
-    'ציונים נמוכים במבחנים',
-    'חוסר ביטחון בלמידה',
-    'לחץ סביב שיעורי הבית',
-    'תסכול והתנגדות ללמידה',
-    '"ניסינו כבר מורים, כלום לא עזר"',
+    'Ребенок не понимает материал в классе',
+    'Получает низкие оценки на тестах',
+    'Не чувствует уверенности в своих силах',
+    'Ненавидит домашние задания',
+    'Не испытывает интерес к учебе',
+    'Занимался с репетиторами, но ничего не помогло',
 ]
 
 const solutions = [
-    'יחס אישי לכל תלמיד',
-    'תוכנית לימודים מותאמת',
-    'חיזוק הביטחון העצמי',
-    'שיפור אמיתי בציונים',
-    'מעקב צמוד ודיווחים להורים',
-    'בניית יסודות לטווח ארוך',
+    'Индивидуальный подход к каждому ученику',
+    'Адаптированная учебная программа',
+    'Укрепление уверенности в себе',
+    'Реальное улучшение оценок',
+    'Постоянный контроль и отчеты для родителей',
+    'Построение основ для долгосрочной перспективы',
 ]
 
 export default function ProblemsVsSolutions() {
@@ -30,23 +30,23 @@ export default function ProblemsVsSolutions() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2>גם אצלכם זה קורה?</h2>
+                    <h2>Знакомо?</h2>
                 </motion.div>
 
                 <div className="pvs-grid">
                     <motion.div
                         className="pvs-card problems"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3>הבעיות</h3>
+                        <h3>Проблемы</h3>
                         <ul>
                             {problems.map((item, i) => (
                                 <motion.li
                                     key={i}
-                                    initial={{ opacity: 0, x: 20 }}
+                                    initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
@@ -60,17 +60,17 @@ export default function ProblemsVsSolutions() {
 
                     <motion.div
                         className="pvs-card solutions"
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <h3>הפתרונות שלנו</h3>
+                        <h3>Наши решения</h3>
                         <ul>
                             {solutions.map((item, i) => (
                                 <motion.li
                                     key={i}
-                                    initial={{ opacity: 0, x: -20 }}
+                                    initial={{ opacity: 0, x: 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 + 0.2 }}
