@@ -1,93 +1,42 @@
-import { useState } from 'react'
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Send, Heart, ChevronLeft } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Heart } from 'lucide-react'
 import './Footer.css'
 
 export default function Footer() {
-    const [email, setEmail] = useState('')
-    const [isSubscribed, setIsSubscribed] = useState(false)
-
-    const handleNewsletter = (e: React.FormEvent) => {
-        e.preventDefault()
-        if (email) {
-            console.log('Newsletter signup:', email)
-            setIsSubscribed(true)
-            setEmail('')
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+            const offset = 80
+            const top = element.getBoundingClientRect().top + window.pageYOffset - offset
+            window.scrollTo({ top, behavior: 'smooth' })
         }
     }
 
     const quickLinks = [
-        { to: '/', label: 'דף הבית' },
-        { to: '/about', label: 'עלינו' },
-        { to: '/lessons', label: 'מרחב השיעורים' },
-        { to: '/price-list', label: 'מחירון' },
-        { to: '/contact', label: 'צור קשר' },
-    ]
-
-    const subjects = [
-        { to: '/lessons/math', label: 'מתמטיקה' },
-        { to: '/lessons/english', label: 'אנגלית' },
-        { to: '/lessons/hebrew', label: 'לשון' },
-        { to: '/lessons/physics', label: 'פיזיקה' },
-        { to: '/lessons/cs', label: 'מדעי המחשב' },
+        { id: 'hero', label: 'דף הבית' },
+        { id: 'problems', label: 'הבעיה והפתרון' },
+        { id: 'how-it-works', label: 'איך זה עובד' },
+        { id: 'testimonials', label: 'המלצות' },
+        { id: 'about', label: 'עלינו' },
+        { id: 'faq', label: 'שאלות נפוצות' },
+        { id: 'contact', label: 'צור קשר' },
     ]
 
     return (
         <footer className="site-footer">
-            {/* Newsletter Section */}
-            <div className="footer-newsletter">
-                <div className="container newsletter-container">
-                    <div className="newsletter-content">
-                        <h3>הישארו מעודכנים</h3>
-                        <p>הירשמו לניוזלטר שלנו וקבלו טיפים ועדכונים ישירות למייל</p>
-                    </div>
-                    {isSubscribed ? (
-                        <div className="newsletter-success">
-                            <span>תודה! נשמח לעדכן אותך</span>
-                        </div>
-                    ) : (
-                        <form className="newsletter-form" onSubmit={handleNewsletter}>
-                            <input
-                                type="email"
-                                placeholder="הכניסו את האימייל שלכם"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                            <button type="submit">
-                                <Send size={18} />
-                                <span>הרשמה</span>
-                            </button>
-                        </form>
-                    )}
-                </div>
-            </div>
-
             {/* Main Footer */}
             <div className="footer-main">
                 <div className="container footer-grid">
                     {/* Brand Column */}
                     <div className="footer-col footer-brand">
-                        <Link to="/" className="footer-logo">
-                            <div className="footer-logo-icon">
-                                <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                    <circle cx="20" cy="20" r="18" stroke="url(#footerLogoGradient)" strokeWidth="3" />
-                                    <path d="M20 8 L20 32 M12 16 L28 16 M12 24 L28 24" stroke="url(#footerLogoGradient)" strokeWidth="2.5" strokeLinecap="round" />
-                                    <defs>
-                                        <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stopColor="#0d9488" />
-                                            <stop offset="100%" stopColor="#14b8a6" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
+                        <button onClick={() => scrollToSection('hero')} className="footer-logo">
+                            <img src="/logo.jpg" alt="מרכז למידה אריאדנה" className="footer-logo-img" />
                             <div className="footer-logo-text">
                                 <span className="logo-main">אריאדנה</span>
                                 <span className="logo-sub">מרכז למידה</span>
                             </div>
-                        </Link>
+                        </button>
                         <p className="footer-description">
-                            מרכז למידה מוביל בראשון לציון. אנחנו מאמינים שכל ילד יכול להצליח עם הליווי הנכון.
+                            לא עוד מורה פרטי - מערכת שלמה לכל המקצועות. מרכז למידה מוביל בראשון לציון ואונליין.
                         </p>
                         <div className="footer-social">
                             <a href="#" aria-label="Facebook">
@@ -104,29 +53,13 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div className="footer-col">
-                        <h4>קישורים מהירים</h4>
+                        <h4>ניווט מהיר</h4>
                         <ul className="footer-links">
                             {quickLinks.map((link) => (
-                                <li key={link.to}>
-                                    <Link to={link.to}>
-                                        <ChevronLeft size={14} />
+                                <li key={link.id}>
+                                    <button onClick={() => scrollToSection(link.id)}>
                                         <span>{link.label}</span>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Subjects */}
-                    <div className="footer-col">
-                        <h4>מקצועות לימוד</h4>
-                        <ul className="footer-links">
-                            {subjects.map((link) => (
-                                <li key={link.to}>
-                                    <Link to={link.to}>
-                                        <ChevronLeft size={14} />
-                                        <span>{link.label}</span>
-                                    </Link>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
@@ -140,7 +73,7 @@ export default function Footer() {
                                 <div className="contact-icon">
                                     <MapPin size={16} />
                                 </div>
-                                <span>יעקב פריימן 20, א.ת ישן, ראשל״צ</span>
+                                <span>יעקב פריימן 20, א.ת ישן, ראשל"צ</span>
                             </li>
                             <li>
                                 <div className="contact-icon">
@@ -168,7 +101,7 @@ export default function Footer() {
             <div className="footer-bottom">
                 <div className="container footer-bottom-content">
                     <p className="copyright">
-                        © {new Date().getFullYear()} מרכז למידה אריאדנה. כל הזכויות שמורות.
+                        &copy; {new Date().getFullYear()} מרכז למידה אריאדנה. כל הזכויות שמורות.
                     </p>
                     <p className="made-with">
                         נבנה עם <Heart size={14} fill="#ef4444" color="#ef4444" /> בישראל

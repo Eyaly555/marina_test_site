@@ -1,0 +1,140 @@
+.faq-section {
+    padding: var(--spacing-4xl) 0;
+    background: white;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-text);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faq-item {
+    background: var(--color-background-alt);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+}
+
+.faq-item.open {
+    border-color: var(--color-primary);
+    background: white;
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: right;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+}
+
+.faq-chevron {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+    color: var(--color-text-muted);
+}
+
+.faq-chevron.rotated {
+    transform: rotate(180deg);
+    color: var(--color-primary);
+}
+
+.faq-answer {
+    overflow: hidden;
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .faq-header {
+        margin-bottom: 2rem;
+    }
+
+    .faq-list {
+        gap: 0.5rem;
+    }
+
+    .faq-question {
+        padding: 1rem 1.25rem;
+        font-size: 0.9375rem;
+        min-height: 48px;
+    }
+
+    .faq-answer p {
+        padding: 0 1.25rem 1rem;
+        font-size: 0.875rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: var(--spacing-xl) 0;
+        overflow-x: hidden;
+    }
+
+    .faq-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .faq-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-list {
+        gap: 0.5rem;
+    }
+
+    .faq-question {
+        padding: 0.875rem 1rem;
+        font-size: 0.875rem;
+        min-height: 48px;
+        gap: 0.75rem;
+    }
+
+    .faq-answer p {
+        padding: 0 1rem 0.875rem;
+        font-size: 0.8125rem;
+        line-height: 1.7;
+    }
+
+    .faq-chevron {
+        width: 18px;
+        height: 18px;
+    }
+}

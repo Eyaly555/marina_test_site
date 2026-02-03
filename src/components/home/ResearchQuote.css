@@ -1,0 +1,98 @@
+.research-section {
+    padding: 4rem 0;
+    background: var(--color-background-alt);
+}
+
+.research-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border-right: 5px solid var(--color-primary);
+}
+
+.research-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(13, 148, 136, 0.1);
+    border-radius: var(--radius-full);
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.research-quote {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.research-cite {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: normal;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .research-section {
+        padding: 2.5rem 0;
+    }
+
+    .research-card {
+        padding: 2rem 1.5rem;
+        border-right-width: 4px;
+    }
+
+    .research-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+
+    .research-quote {
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-section {
+        padding: 2rem 0;
+    }
+
+    .research-card {
+        padding: 1.5rem 1rem;
+        border-radius: var(--radius-lg);
+        border-right-width: 3px;
+    }
+
+    .research-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0.75rem;
+    }
+
+    .research-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .research-quote {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .research-cite {
+        font-size: 0.8125rem;
+    }
+}

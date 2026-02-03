@@ -4,7 +4,17 @@
       "Bash(npm run dev:*)",
       "Skill(frontend-design)",
       "Bash(npm run build:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(tree:*)",
+      "Bash(move \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\About.tsx\" \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\_archived\\\\About.tsx\")",
+      "Bash(move \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\About.css\" \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\_archived\\\\About.css\")",
+      "Bash(move \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\Contact.tsx\" \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\_archived\\\\Contact.tsx\")",
+      "Bash(move:*)",
+      "Bash(move \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\LessonSpace.tsx\" \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\_archived\\\\LessonSpace.tsx\")",
+      "Bash(move \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\PriceList.css\" \"c:\\\\Users\\\\eyaly\\\\Desktop\\\\Businesses\\\\eym-group_n8n\\\\marina_example_site\\\\src\\\\pages\\\\_archived\\\\PriceList.css\")",
+      "Bash(npx tsc:*)",
+      "mcp__context7__resolve-library-id",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

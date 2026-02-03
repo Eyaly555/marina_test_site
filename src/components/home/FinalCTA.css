@@ -1,0 +1,126 @@
+.final-cta-section {
+    position: relative;
+    padding: var(--spacing-4xl) 0;
+    overflow: hidden;
+}
+
+.final-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.final-cta-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.final-cta-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.final-cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.final-cta-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.final-cta-form {
+    margin-bottom: 2rem;
+}
+
+.final-cta-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.cta-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-note svg {
+    flex-shrink: 0;
+    color: var(--color-primary-light);
+}
+
+.cta-note.warning svg {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .final-cta-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .final-cta-content {
+        max-width: 100%;
+    }
+
+    .final-cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .final-cta-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .final-cta-notes {
+        gap: 0.625rem;
+    }
+
+    .cta-note {
+        font-size: 0.8125rem;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-cta-section {
+        padding: var(--spacing-xl) 0;
+        overflow-x: hidden;
+    }
+
+    .final-cta-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .final-cta-subtitle {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .final-cta-form {
+        margin-bottom: 1.5rem;
+    }
+
+    .final-cta-notes {
+        gap: 0.5rem;
+    }
+
+    .cta-note {
+        font-size: 0.75rem;
+    }
+}

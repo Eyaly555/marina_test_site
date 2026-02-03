@@ -13,6 +13,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -96,6 +99,12 @@ button {
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
   }
 }
 
@@ -330,4 +339,114 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary-dark);
+}
+
+/* ===========================
+   Mobile Responsive Styles
+   =========================== */
+
+/* Tablet breakpoint (768px) */
+@media (max-width: 768px) {
+  /* Reduce section padding on smaller screens */
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  /* Ensure all buttons meet 44px minimum touch target */
+  .btn {
+    min-height: 48px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg {
+    min-height: 52px;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1rem;
+  }
+
+  /* Prevent horizontal overflow globally */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Disable hover-based lift effects on touch devices */
+  .card:hover {
+    transform: none;
+  }
+
+  /* Tighter typography for mobile */
+  p {
+    line-height: 1.7;
+  }
+
+  /* Hide custom scrollbar on mobile (use native) */
+  ::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+}
+
+/* Small phone breakpoint (480px) */
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 0.75rem var(--spacing-md);
+    font-size: 0.875rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-lg {
+    min-height: 48px;
+    padding: 0.875rem var(--spacing-lg);
+    font-size: 0.9375rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable all hover transforms on pure touch devices */
+  .card:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+
+  /* Ensure generous tap targets for all interactive elements */
+  a, button {
+    min-height: 44px;
+  }
+
+  /* Active state feedback instead of hover */
+  .btn:active {
+    transform: scale(0.97);
+    transition-duration: 100ms;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+    transition-duration: 100ms;
+  }
+}
+
+/* Safe area support for modern notched devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
 }

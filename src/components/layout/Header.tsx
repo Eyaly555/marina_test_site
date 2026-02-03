@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import { Phone, Mail, Menu, X, Facebook, Instagram, Youtube, MapPin } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Header.css'
@@ -18,12 +17,23 @@ export default function Header() {
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
+    const scrollToSection = (sectionId: string) => {
+        setIsMenuOpen(false)
+        const element = document.getElementById(sectionId)
+        if (element) {
+            const offset = 80
+            const top = element.getBoundingClientRect().top + window.pageYOffset - offset
+            window.scrollTo({ top, behavior: 'smooth' })
+        }
+    }
+
     const navLinks = [
-        { to: '/', label: 'דף הבית' },
-        { to: '/about', label: 'עלינו' },
-        { to: '/lessons', label: 'מרחב השיעורים' },
-        { to: '/price-list', label: 'מחירון' },
-        { to: '/contact', label: 'צור קשר' },
+        { id: 'hero', label: 'דף הבית' },
+        { id: 'problems', label: 'הבעיה והפתרון' },
+        { id: 'how-it-works', label: 'איך זה עובד' },
+        { id: 'testimonials', label: 'המלצות' },
+        { id: 'about', label: 'עלינו' },
+        { id: 'faq', label: 'שאלות נפוצות' },
     ]
 
     return (
@@ -70,47 +80,35 @@ export default function Header() {
             {/* Main Navigation */}
             <div className="main-nav-container">
                 <div className="container nav-content">
-                    <Link to="/" className="logo">
-                        <div className="logo-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" stroke="url(#logoGradient)" strokeWidth="3" />
-                                <path d="M20 8 L20 32 M12 16 L28 16 M12 24 L28 24" stroke="url(#logoGradient)" strokeWidth="2.5" strokeLinecap="round" />
-                                <defs>
-                                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="#0d9488" />
-                                        <stop offset="100%" stopColor="#14b8a6" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
+                    <button onClick={() => scrollToSection('hero')} className="logo">
+                        <img src="/logo.jpg" alt="מרכז למידה אריאדנה" className="logo-image" />
                         <div className="logo-text">
                             <span className="logo-main">אריאדנה</span>
                             <span className="logo-sub">מרכז למידה</span>
                         </div>
-                    </Link>
+                    </button>
 
                     <nav className="main-nav desktop-nav">
                         <ul className="nav-links">
                             {navLinks.map((link) => (
-                                <li key={link.to}>
-                                    <NavLink
-                                        to={link.to}
-                                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                                        end={link.to === '/'}
+                                <li key={link.id}>
+                                    <button
+                                        onClick={() => scrollToSection(link.id)}
+                                        className="nav-link"
                                     >
                                         {link.label}
                                         <span className="nav-indicator" />
-                                    </NavLink>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
                     </nav>
 
                     <div className="header-cta">
-                        <Link to="/contact" className="cta-button">
-                            <span>שיעור ניסיון</span>
+                        <button onClick={() => scrollToSection('contact')} className="cta-button">
+                            <span>שיחת יעוץ חינמית</span>
                             <div className="cta-shine" />
-                        </Link>
+                        </button>
                     </div>
 
                     <button
@@ -138,29 +136,23 @@ export default function Header() {
                             <ul className="mobile-nav-links">
                                 {navLinks.map((link, index) => (
                                     <motion.li
-                                        key={link.to}
+                                        key={link.id}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.1 }}
                                     >
-                                        <NavLink
-                                            to={link.to}
-                                            onClick={() => setIsMenuOpen(false)}
-                                            className={({ isActive }) => isActive ? 'active' : ''}
-                                            end={link.to === '/'}
-                                        >
+                                        <button onClick={() => scrollToSection(link.id)}>
                                             {link.label}
-                                        </NavLink>
+                                        </button>
                                     </motion.li>
                                 ))}
                             </ul>
-                            <Link
-                                to="/contact"
+                            <button
                                 className="mobile-cta"
-                                onClick={() => setIsMenuOpen(false)}
+                                onClick={() => scrollToSection('contact')}
                             >
-                                קבע שיעור ניסיון חינם
-                            </Link>
+                                קבעו שיחת יעוץ חינמית
+                            </button>
                         </nav>
                     </motion.div>
                 )}

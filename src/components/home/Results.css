@@ -1,0 +1,131 @@
+.results-section {
+    padding: var(--spacing-4xl) 0;
+    background: white;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-text);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.result-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.result-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--color-background-alt);
+}
+
+.result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.result-card:hover .result-image img {
+    transform: scale(1.05);
+}
+
+.result-caption {
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(245, 158, 11, 0.05));
+}
+
+@media (max-width: 1024px) {
+    .results-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .results-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .results-header {
+        margin-bottom: 2rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .result-card:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .result-card:last-child {
+        grid-column: span 2;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .result-caption {
+        padding: 0.75rem;
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-section {
+        padding: var(--spacing-xl) 0;
+        overflow-x: hidden;
+    }
+
+    .results-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .results-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .results-grid {
+        gap: 0.5rem;
+    }
+
+    .result-caption {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .result-card:last-child {
+        max-width: 200px;
+    }
+}
