@@ -29,7 +29,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="footer-col footer-brand">
                         <button onClick={() => scrollToSection('hero')} className="footer-logo">
-                            <img src="/logo.jpg" alt="Центр Ариадна" className="footer-logo-img" />
+                            <img src="/Gemini_Generated_Image_5ln0ad5ln0ad5ln0-removebg-preview.png" alt="Центр Ариадна" className="footer-logo-img" />
                             <div className="footer-logo-text">
                                 <span className="logo-main">Ариадна</span>
                                 <span className="logo-sub">Центр обучения</span>
