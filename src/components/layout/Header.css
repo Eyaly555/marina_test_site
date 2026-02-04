@@ -181,6 +181,7 @@
     text-decoration: none;
     transition: all var(--transition-fast);
     border-radius: var(--radius-md);
+    white-space: nowrap;
 }
 
 .nav-link:hover {
