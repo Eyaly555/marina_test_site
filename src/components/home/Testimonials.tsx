@@ -1,11 +1,22 @@
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { ReactGoogleReviews } from 'react-google-reviews'
-import 'react-google-reviews/dist/index.css'
 import './Testimonials.css'
 
-const FEATURABLE_WIDGET_ID = import.meta.env.VITE_FEATURABLE_WIDGET_ID || 'YOUR_WIDGET_ID'
-
 export default function Testimonials() {
+    const widgetRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (!widgetRef.current) return
+        const script = document.createElement('script')
+        script.src = 'https://cdn.trustindex.io/loader.js?52fedbd6427d01184d862f6b98b'
+        script.async = true
+        script.defer = true
+        widgetRef.current.appendChild(script)
+        return () => {
+            script.remove()
+        }
+    }, [])
+
     return (
         <section className="testimonials-section" id="testimonials">
             <div className="testimonials-bg">
@@ -22,27 +33,7 @@ export default function Testimonials() {
                     <h2>מה הורים אומרים על מרכז אריאדנה</h2>
                 </motion.div>
 
-                <motion.div
-                    className="google-reviews-wrapper"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                >
-                    <ReactGoogleReviews
-                        layout="carousel"
-                        featurableId={FEATURABLE_WIDGET_ID}
-                        maxCharacters={200}
-                        carouselAutoplay={true}
-                        carouselSpeed={5000}
-                        showDots={true}
-                        dateDisplay="relative"
-                        reviewVariant="card"
-                        theme="light"
-                        structuredData={true}
-                        brandName="מרכז אריאדנה"
-                    />
-                </motion.div>
+                <div className="testimonials-widget" ref={widgetRef} />
             </div>
         </section>
     )
