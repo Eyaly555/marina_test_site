@@ -34,19 +34,19 @@ export default function Contact() {
         {
             icon: Phone,
             title: 'טלפון',
-            content: '054-688-6606',
-            link: 'tel:054-688-6606'
+            content: '054-962-8860',
+            link: 'tel:054-962-8860'
         },
         {
             icon: Mail,
             title: 'אימייל',
-            content: 'info@ariadna-center.com',
-            link: 'mailto:info@ariadna-center.com'
+            content: 'info@ariadnacenter.com',
+            link: 'mailto:info@ariadnacenter.com'
         },
         {
             icon: Clock,
             title: 'שעות פעילות',
-            content: 'א׳-ה׳: 14:00 - 21:00 | ו׳: 09:00 - 13:00',
+            content: 'א׳-ה׳: 9:00 - 20:00 | ו׳: 9:00 - 16:00',
             link: null
         },
     ]
@@ -123,7 +123,7 @@ export default function Contact() {
                                 <MessageCircle size={24} />
                                 <div>
                                     <span>רוצים תשובה מהירה?</span>
-                                    <a href="https://wa.me/972546886606" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://wa.me/972549628860" target="_blank" rel="noopener noreferrer">
                                         שלחו לנו הודעה בוואטסאפ
                                     </a>
                                 </div>

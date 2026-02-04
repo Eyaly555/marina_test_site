@@ -42,18 +42,18 @@ export default function Header() {
             <div className="top-bar">
                 <div className="container top-bar-content">
                     <div className="contact-info">
-                        <a href="tel:054-688-6606" className="contact-item">
+                        <a href="tel:054-962-8860" className="contact-item">
                             <div className="contact-icon">
                                 <Phone size={14} />
                             </div>
-                            <span>054-688-6606</span>
+                            <span>054-962-8860</span>
                         </a>
                         <div className="divider" />
-                        <a href="mailto:info@ariadna-center.com" className="contact-item">
+                        <a href="mailto:info@ariadnacenter.com" className="contact-item">
                             <div className="contact-icon">
                                 <Mail size={14} />
                             </div>
-                            <span>info@ariadna-center.com</span>
+                            <span>info@ariadnacenter.com</span>
                         </a>
                         <div className="divider" />
                         <span className="contact-item location">

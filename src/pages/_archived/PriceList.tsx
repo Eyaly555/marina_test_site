@@ -240,7 +240,7 @@ export default function PriceList() {
                             <Link to="/contact" className="btn btn-secondary btn-lg">
                                 צרו קשר
                             </Link>
-                            <a href="tel:054-688-6606" className="btn btn-outline btn-lg">
+                            <a href="tel:054-962-8860" className="btn btn-outline btn-lg">
                                 התקשרו עכשיו
                             </a>
                         </div>

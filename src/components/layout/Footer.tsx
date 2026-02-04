@@ -79,19 +79,19 @@ export default function Footer() {
                                 <div className="contact-icon">
                                     <Phone size={16} />
                                 </div>
-                                <a href="tel:054-688-6606">054-688-6606</a>
+                                <a href="tel:054-962-8860">054-962-8860</a>
                             </li>
                             <li>
                                 <div className="contact-icon">
                                     <Mail size={16} />
                                 </div>
-                                <a href="mailto:info@ariadna-center.com">info@ariadna-center.com</a>
+                                <a href="mailto:info@ariadnacenter.com">info@ariadnacenter.com</a>
                             </li>
                         </ul>
                         <div className="footer-hours">
                             <h5>שעות פעילות</h5>
-                            <p>ראשון - חמישי: 14:00 - 21:00</p>
-                            <p>שישי: 09:00 - 13:00</p>
+                            <p>ראשון - חמישי: 9:00 - 20:00</p>
+                            <p>שישי: 9:00 - 16:00</p>
                         </div>
                     </div>
                 </div>
