@@ -77,7 +77,7 @@ export default function Hero() {
                         </div>
                         <div className="hero-note">
                             <MapPin size={16} />
-                            <span>Онлайн или фронтально в Ришон-ле-Ционе</span>
+                            <span>Фронтально в Ришон-ле-Ционе, онлайн из любой точки мира</span>
                         </div>
                     </div>
 

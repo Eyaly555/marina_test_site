@@ -8,10 +8,6 @@ const gradeOptions = [
     '7 класс', '8 класс', '9 класс', '10 класс', '11 класс', '12 класс',
 ]
 
-const subjectOptions = [
-    'Математика', 'Английский', 'Иврит', 'История',
-    'Физика', 'Подготовка к 1 классу', 'Информатика', 'Граждановедение',
-]
 
 interface LeadFormProps {
     variant?: 'card' | 'inline' | 'dark'
@@ -25,7 +21,7 @@ interface LeadFormProps {
 
 export default function LeadForm({
     variant = 'card',
-    title = 'Запись на первое занятие',
+    title = 'Запись на консультацию с нами',
     subtitle = 'Заполните данные, и мы свяжемся с вами в течение 24 часов',
     buttonText = 'Записаться на бесплатную консультацию',
     badgeText = 'Бесплатная консультация',
@@ -33,11 +29,11 @@ export default function LeadForm({
     showBadge = true,
 }: LeadFormProps) {
     const [formData, setFormData] = useState({
-        parentName: '',
+        parentFirstName: '',
+        parentLastName: '',
         phone: '',
         childName: '',
         grade: '',
-        subject: '',
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
@@ -56,11 +52,11 @@ export default function LeadForm({
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        parentName: formData.parentName,
+                        parentFirstName: formData.parentFirstName,
+                        parentLastName: formData.parentLastName,
                         phone: formData.phone,
                         childName: formData.childName,
                         grade: formData.grade,
-                        subject: formData.subject,
                         source: 'landing-page',
                         timestamp: new Date().toISOString(),
                     }),
@@ -113,25 +109,36 @@ export default function LeadForm({
             <form onSubmit={handleSubmit} className="lead-form">
                 <div className="form-row">
                     <div className="form-group">
-                        <label>Имя родителя</label>
+                        <label>Имя</label>
                         <input
                             type="text"
-                            placeholder="Ваше имя"
-                            value={formData.parentName}
-                            onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
+                            placeholder="Имя родителя"
+                            value={formData.parentFirstName}
+                            onChange={(e) => setFormData({ ...formData, parentFirstName: e.target.value })}
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label>Телефон</label>
+                        <label>Фамилия</label>
                         <input
-                            type="tel"
-                            placeholder="050-000-0000"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            type="text"
+                            placeholder="Фамилия родителя"
+                            value={formData.parentLastName}
+                            onChange={(e) => setFormData({ ...formData, parentLastName: e.target.value })}
                             required
                         />
                     </div>
+                </div>
+
+                <div className="form-group form-group-full">
+                    <label>Телефон</label>
+                    <input
+                        type="tel"
+                        placeholder="050-000-0000"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        required
+                    />
                 </div>
 
                 <div className="form-row">
@@ -158,20 +165,6 @@ export default function LeadForm({
                             ))}
                         </select>
                     </div>
-                </div>
-
-                <div className="form-group form-group-full">
-                    <label>Предмет</label>
-                    <select
-                        value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        required
-                    >
-                        <option value="">Выберите предмет</option>
-                        {subjectOptions.map((s) => (
-                            <option key={s} value={s}>{s}</option>
-                        ))}
-                    </select>
                 </div>
 
                 {error && <p className="form-error">{error}</p>}

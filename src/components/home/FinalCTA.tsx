@@ -36,7 +36,7 @@ export default function FinalCTA() {
                         </div>
                         <div className="cta-note warning">
                             <AlertTriangle size={16} />
-                            <span>Мы специализируемся на долгосрочном сопровождении. Фронтальные занятия только в Ришон-ле-Ционе.</span>
+                            <span>Мы специализируемся на долгосрочном сопровождении. Фронтальные занятия в Ришон-ле-Ционе, онлайн из любой точки мира.</span>
                         </div>
                     </div>
                 </motion.div>
