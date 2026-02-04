@@ -5,6 +5,8 @@ const results = [
     { image: '/test1.jpg', caption: 'Ученик 8 класса - 95 по математике' },
     { image: '/test2.jpg', caption: 'Ученица 9 класса - 92 по английскому' },
     { image: '/test3.jpg', caption: 'Ученик 11 класса - 98 по физике' },
+    { image: '/test4.jpg', caption: 'Ученица 10 класса - 90 по ивриту' },
+    { image: '/test5.jpg', caption: 'Ученик 12 класса - 96 по математике' },
 ]
 
 export default function Results() {
