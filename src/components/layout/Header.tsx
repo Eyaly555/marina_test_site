@@ -81,7 +81,7 @@ export default function Header() {
             <div className="main-nav-container">
                 <div className="container nav-content">
                     <button onClick={() => scrollToSection('hero')} className="logo">
-                        <img src="/logo.jpg" alt="מרכז למידה אריאדנה" className="logo-image" />
+                        <img src="/Gemini_Generated_Image_5ln0ad5ln0ad5ln0-removebg-preview.png" alt="מרכז למידה אריאדנה" className="logo-image" />
                         <div className="logo-text">
                             <span className="logo-main">אריאדנה</span>
                             <span className="logo-sub">מרכז למידה</span>

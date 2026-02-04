@@ -128,10 +128,9 @@
 }
 
 .logo-image {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-md);
-    object-fit: cover;
+    height: 48px;
+    width: auto;
+    object-fit: contain;
     transition: transform var(--transition-normal);
 }
 
@@ -399,7 +398,6 @@
 
 @media (max-width: 480px) {
     .logo-image {
-        width: 36px;
         height: 36px;
     }
 
