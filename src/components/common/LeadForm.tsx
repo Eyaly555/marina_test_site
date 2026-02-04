@@ -44,26 +44,22 @@ export default function LeadForm({
         setIsSubmitting(true)
         setError('')
 
-        const webhookUrl = import.meta.env.VITE_WEBHOOK_URL
-
         try {
-            if (webhookUrl && webhookUrl !== 'https://your-webhook-url.example.com/webhook') {
-                await fetch(webhookUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        parentFirstName: formData.parentFirstName,
-                        parentLastName: formData.parentLastName,
-                        phone: formData.phone,
-                        childName: formData.childName,
-                        grade: formData.grade,
-                        source: 'landing-page',
-                        timestamp: new Date().toISOString(),
-                    }),
-                })
-            } else {
-                console.log('Form submitted (no webhook configured):', formData)
-            }
+            const response = await fetch('/api/webhook', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    parentFirstName: formData.parentFirstName,
+                    parentLastName: formData.parentLastName,
+                    phone: formData.phone,
+                    childName: formData.childName,
+                    grade: formData.grade,
+                    source: 'landing-page',
+                    timestamp: new Date().toISOString(),
+                }),
+            })
+
+            if (!response.ok) throw new Error('Request failed')
             setIsSubmitted(true)
         } catch {
             console.error('Form submission failed')
