@@ -3,10 +3,10 @@ import './Results.css'
 
 const results = [
     { image: '/test1.jpg', caption: 'Ученик 8 класса - 95 по математике' },
-    { image: '/test2.jpg', caption: 'Ученица 9 класса - 92 по английскому' },
-    { image: '/test3.jpg', caption: 'Ученик 11 класса - 98 по физике' },
-    { image: '/test4.jpg', caption: 'Ученица 10 класса - 90 по ивриту' },
-    { image: '/test5.jpg', caption: 'Ученик 12 класса - 96 по математике' },
+    { image: '/test2.jpg', caption: 'Ученица 9 класса - 92 по математике' },
+    { image: '/test3.jpg', caption: 'Ученик 11 класса - 98 по математике' },
+    { image: '/test4.jpg', caption: 'Ученица 10 класса - 90 по математике' },
+    { image: '/test5.jpg', caption: 'Ученик 12 класса - 96 по английскому' },
 ]
 
 export default function Results() {

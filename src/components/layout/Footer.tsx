@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Heart } from 'lucide-react'
+import { Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
 import './Footer.css'
 
 export default function Footer() {
@@ -39,14 +40,17 @@ export default function Footer() {
                             Не просто репетитор - комплексная система обучения по всем предметам. Ведущий центр обучения в Ришон-ле-Ционе и онлайн.
                         </p>
                         <div className="footer-social">
-                            <a href="#" aria-label="Facebook">
-                                <Facebook size={20} />
+                            <a href="https://www.facebook.com/mathmarina" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <FaFacebookF size={18} />
                             </a>
-                            <a href="#" aria-label="Instagram">
-                                <Instagram size={20} />
+                            <a href="https://www.instagram.com/ariadnaisrael/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <FaInstagram size={18} />
                             </a>
-                            <a href="#" aria-label="YouTube">
-                                <Youtube size={20} />
+                            <a href="https://www.youtube.com/channel/UCnBdmoLElMGGLhC6ikp266Q" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <FaYoutube size={18} />
+                            </a>
+                            <a href="https://www.tiktok.com/@ariadnalearningce" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                <FaTiktok size={18} />
                             </a>
                         </div>
                     </div>

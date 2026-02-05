@@ -34,6 +34,7 @@ export default function LeadForm({
         phone: '',
         childName: '',
         grade: '',
+        notes: '',
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
@@ -54,6 +55,7 @@ export default function LeadForm({
                     phone: formData.phone,
                     childName: formData.childName,
                     grade: formData.grade,
+                    notes: formData.notes,
                     source: 'landing-page',
                     timestamp: new Date().toISOString(),
                 }),
@@ -161,6 +163,16 @@ export default function LeadForm({
                             ))}
                         </select>
                     </div>
+                </div>
+
+                <div className="form-group form-group-full">
+                    <label>Примечания (необязательно)</label>
+                    <textarea
+                        placeholder="Расскажите немного о ребенке и его трудностях..."
+                        value={formData.notes}
+                        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                        rows={3}
+                    />
                 </div>
 
                 {error && <p className="form-error">{error}</p>}
