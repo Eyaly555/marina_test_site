@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Phone, Mail, Menu, X, MapPin } from 'lucide-react'
+import { Phone, Menu, X, MapPin } from 'lucide-react'
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Header.css'
