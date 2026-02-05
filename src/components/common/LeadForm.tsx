@@ -21,7 +21,7 @@ interface LeadFormProps {
 
 export default function LeadForm({
     variant = 'card',
-    title = 'הרשמה לשיעור ראשון',
+    title = 'הרשמה לשיחת יעוץ ללא עלות עם צוות המרכז',
     subtitle = 'מלאו את הפרטים ונחזור אליכם תוך 24 שעות',
     buttonText = 'קבע שיעור ניסיון חינם',
     badgeText = 'שיעור ניסיון חינם',
@@ -34,6 +34,7 @@ export default function LeadForm({
         phone: '',
         childName: '',
         grade: '',
+        notes: '',
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
@@ -54,6 +55,7 @@ export default function LeadForm({
                     phone: formData.phone,
                     childName: formData.childName,
                     grade: formData.grade,
+                    notes: formData.notes,
                     source: 'landing-page',
                     timestamp: new Date().toISOString(),
                 }),
@@ -161,6 +163,16 @@ export default function LeadForm({
                             ))}
                         </select>
                     </div>
+                </div>
+
+                <div className="form-group form-group-full">
+                    <label>הערות (אופציונלי)</label>
+                    <textarea
+                        placeholder="ספרו לנו קצת על הילד והאתגרים שלו..."
+                        value={formData.notes}
+                        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                        rows={3}
+                    />
                 </div>
 
                 {error && <p className="form-error">{error}</p>}

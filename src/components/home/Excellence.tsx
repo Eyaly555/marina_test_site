@@ -59,7 +59,7 @@ export default function Excellence() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <LeadForm variant="card" title="הצטרפו למשפחת אריאדנה" subtitle="מלאו פרטים ונחזור אליכם תוך 24 שעות" />
+                    <LeadForm variant="card" title="הרשמה לשיחת יעוץ ללא עלות עם צוות המרכז" subtitle="מלאו פרטים ונחזור אליכם תוך 24 שעות" />
                 </motion.div>
             </div>
         </section>
