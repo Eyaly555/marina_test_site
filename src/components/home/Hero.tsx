@@ -38,7 +38,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="hero-title">
-                        <span className="title-line">Пробовали заниматься с 3 репетиторами. Ничего не помогло.</span>
+                        <span className="title-line">"Пробовали заниматься с 3 репетиторами. Ничего не помогло."</span>
                     </h1>
 
                     <p className="hero-description">
