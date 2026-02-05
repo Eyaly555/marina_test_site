@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Phone, Mail, Menu, X, Facebook, Instagram, Youtube, MapPin } from 'lucide-react'
+import { Phone, Mail, Menu, X, MapPin } from 'lucide-react'
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Header.css'
 
@@ -42,18 +43,18 @@ export default function Header() {
             <div className="top-bar">
                 <div className="container top-bar-content">
                     <div className="contact-info">
-                        <a href="tel:054-962-8860" className="contact-item">
+                        <a href="tel:054-8052281" className="contact-item">
                             <div className="contact-icon">
                                 <Phone size={14} />
                             </div>
-                            <span>054-962-8860</span>
+                            <span>054-8052281</span>
                         </a>
                         <div className="divider" />
-                        <a href="mailto:info@ariadnacenter.com" className="contact-item">
-                            <div className="contact-icon">
-                                <Mail size={14} />
+                        <a href="https://wa.me/972549628860?text=%D7%A8%D7%90%D7%99%D7%A0%D7%95%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%A0%D7%95%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A7%D7%A6%D7%AA%20%D7%99%D7%95%D7%AA%D7%A8." target="_blank" rel="noopener noreferrer" className="contact-item whatsapp-item">
+                            <div className="contact-icon whatsapp">
+                                <FaWhatsapp size={14} />
                             </div>
-                            <span>info@ariadnacenter.com</span>
+                            <span>054-962-8860</span>
                         </a>
                         <div className="divider" />
                         <span className="contact-item location">
@@ -64,14 +65,17 @@ export default function Header() {
                         </span>
                     </div>
                     <div className="social-icons">
-                        <a href="#" aria-label="Facebook" className="social-link">
-                            <Facebook size={16} />
+                        <a href="https://www.facebook.com/ariadnablp" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-link">
+                            <FaFacebookF size={14} />
                         </a>
-                        <a href="#" aria-label="Instagram" className="social-link">
-                            <Instagram size={16} />
+                        <a href="https://www.instagram.com/ariadnablp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-link">
+                            <FaInstagram size={14} />
                         </a>
-                        <a href="#" aria-label="YouTube" className="social-link">
-                            <Youtube size={16} />
+                        <a href="https://www.youtube.com/channel/UCEq0zoCTCJiaSUYpSN6A6-Q" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="social-link">
+                            <FaYoutube size={14} />
+                        </a>
+                        <a href="https://www.tiktok.com/@ariadna.education" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="social-link">
+                            <FaTiktok size={14} />
                         </a>
                     </div>
                 </div>
