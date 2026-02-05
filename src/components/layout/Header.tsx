@@ -43,11 +43,11 @@ export default function Header() {
             <div className="top-bar">
                 <div className="container top-bar-content">
                     <div className="contact-info">
-                        <a href="tel:054-8052281" className="contact-item">
+                        <a href="tel:054-805-2281" className="contact-item">
                             <div className="contact-icon">
                                 <Phone size={14} />
                             </div>
-                            <span>054-8052281</span>
+                            <span>054-805-2281</span>
                         </a>
                         <div className="divider" />
                         <a href="https://wa.me/972549628860?text=%D0%9F%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D0%BB%D0%B8%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%20%D0%B2%D0%B0%D1%81%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5" target="_blank" rel="noopener noreferrer" className="contact-item whatsapp-item">

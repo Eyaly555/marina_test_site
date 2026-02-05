@@ -5,7 +5,7 @@ import './WhatsAppButton.css'
 
 export default function WhatsAppButton() {
     const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '972549628860'
-    const phoneNumber = '054-8052281'
+    const phoneNumber = '054-805-2281'
     const message = 'Посмотрели информацию о вас на сайте, заинтересовались и хотели бы узнать дополнительную информацию.'
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
