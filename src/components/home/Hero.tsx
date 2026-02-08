@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Star, AlertTriangle } from 'lucide-react'
+import { Star, AlertTriangle, Users, Calendar, Award } from 'lucide-react'
 import LeadForm from '../common/LeadForm'
 import './Hero.css'
 
@@ -65,6 +65,24 @@ export default function Hero() {
                             ))}
                         </div>
                         <span className="review-text">ביקורות מצוינות בגוגל</span>
+                    </div>
+
+                    <div className="hero-stats">
+                        <div className="hero-stat">
+                            <Users size={20} />
+                            <span className="stat-number">500+</span>
+                            <span className="stat-label">תלמידים</span>
+                        </div>
+                        <div className="hero-stat">
+                            <Calendar size={20} />
+                            <span className="stat-number">7+</span>
+                            <span className="stat-label">שנות ניסיון</span>
+                        </div>
+                        <div className="hero-stat">
+                            <Award size={20} />
+                            <span className="stat-number">98%</span>
+                            <span className="stat-label">שביעות רצון</span>
+                        </div>
                     </div>
                 </motion.div>
 

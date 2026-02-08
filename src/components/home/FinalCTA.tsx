@@ -36,7 +36,7 @@ export default function FinalCTA() {
                         </div>
                         <div className="cta-note warning">
                             <AlertTriangle size={16} />
-                            <span>אנחנו מתמחים בליווי לטווח ארוך. שיעורים פרונטליים רק בראשון לציון.</span>
+                            <span>אנחנו מתמחים בליווי לטווח ארוך. שיעורים פרונטליים רק בראשון לציון ו<u>שיעורי אונליין מכל מקום בעולם</u>.</span>
                         </div>
                     </div>
                 </motion.div>

@@ -23,8 +23,8 @@ export default function LeadForm({
     variant = 'card',
     title = 'הרשמה לשיחת יעוץ ללא עלות עם צוות המרכז',
     subtitle = 'מלאו את הפרטים ונחזור אליכם תוך 24 שעות',
-    buttonText = 'קבע שיעור ניסיון חינם',
-    badgeText = 'שיעור ניסיון חינם',
+    buttonText = 'שיחת יעוץ חינמית',
+    badgeText = 'שיחת יעוץ חינמית',
     disclaimerText = 'ללא התחייבות, ללא עלות',
     showBadge = true,
 }: LeadFormProps) {
