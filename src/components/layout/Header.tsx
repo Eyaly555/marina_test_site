@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Phone, Menu, X, MapPin } from 'lucide-react'
+import { Phone, Menu, X } from 'lucide-react'
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Header.css'
@@ -56,13 +56,6 @@ export default function Header() {
                             </div>
                             <span>054-962-8860</span>
                         </a>
-                        <div className="divider" />
-                        <span className="contact-item location">
-                            <div className="contact-icon">
-                                <MapPin size={14} />
-                            </div>
-                            <span>ראשון לציון</span>
-                        </span>
                     </div>
                     <div className="social-icons">
                         <a href="https://www.facebook.com/ariadnablp" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-link">
