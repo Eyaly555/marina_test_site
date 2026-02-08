@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Heart } from 'lucide-react'
-import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa'
 import './Footer.css'
 
 export default function Footer() {
@@ -83,7 +83,13 @@ export default function Footer() {
                                 <div className="contact-icon">
                                     <Phone size={16} />
                                 </div>
-                                <a href="tel:054-962-8860">054-962-8860</a>
+                                <a href="tel:054-805-2281">054-805-2281</a>
+                            </li>
+                            <li>
+                                <div className="contact-icon">
+                                    <FaWhatsapp size={16} />
+                                </div>
+                                <a href="https://wa.me/972549628860?text=%D7%A8%D7%90%D7%99%D7%A0%D7%95%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%A0%D7%95%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A7%D7%A6%D7%AA%20%D7%99%D7%95%D7%AA%D7%A8." target="_blank" rel="noopener noreferrer">054-962-8860</a>
                             </li>
                             <li>
                                 <div className="contact-icon">
