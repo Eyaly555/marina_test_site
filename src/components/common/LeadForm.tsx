@@ -201,7 +201,7 @@ export default function LeadForm({
                 <button
                     type="submit"
                     className={`submit-btn ${isSubmitting ? 'loading' : ''}`}
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !privacyConsent}
                 >
                     {isSubmitting ? (
                         <span className="loader" />
