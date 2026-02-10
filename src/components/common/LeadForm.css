@@ -180,6 +180,63 @@
     width: 100%;
 }
 
+/* Privacy Consent Checkbox */
+.privacy-consent {
+    margin-top: 0.25rem;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    cursor: pointer;
+    font-size: 0.8125rem !important;
+    font-weight: 400 !important;
+    color: var(--color-text-light) !important;
+    line-height: 1.5;
+}
+
+.consent-label input[type="checkbox"] {
+    margin-top: 0.2rem;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.consent-text {
+    flex: 1;
+}
+
+.consent-note {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+}
+
+.consent-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-size: 0.75rem;
+    transition: color var(--transition-fast);
+}
+
+.consent-link:hover {
+    color: var(--color-primary-dark);
+}
+
+.lead-form-wrapper.dark .consent-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.lead-form-wrapper.dark .consent-note {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.lead-form-wrapper.dark .consent-link {
+    color: var(--color-primary-light);
+}
+
 /* Submit Button */
 .lead-form .submit-btn {
     display: flex;
