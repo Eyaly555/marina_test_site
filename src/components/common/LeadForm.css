@@ -33,7 +33,7 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-.lead-form-wrapper.dark .form-group input,
+.lead-form-wrapper.dark .form-group input:not([type="checkbox"]),
 .lead-form-wrapper.dark .form-group select {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
@@ -53,7 +53,7 @@
     color: white;
 }
 
-.lead-form-wrapper.dark .form-group input:focus,
+.lead-form-wrapper.dark .form-group input:not([type="checkbox"]):focus,
 .lead-form-wrapper.dark .form-group select:focus {
     border-color: var(--color-primary-light);
     background-color: rgba(255, 255, 255, 0.15);
@@ -138,7 +138,7 @@
     color: var(--color-text);
 }
 
-.lead-form .form-group input,
+.lead-form .form-group input:not([type="checkbox"]),
 .lead-form .form-group select {
     padding: 0.875rem 1rem;
     border: 2px solid #e2e8f0;
@@ -160,7 +160,7 @@
     padding-left: 2.5rem;
 }
 
-.lead-form .form-group input:focus,
+.lead-form .form-group input:not([type="checkbox"]):focus,
 .lead-form .form-group select:focus {
     outline: none;
     border-color: var(--color-primary);
@@ -371,7 +371,7 @@
     }
 
     /* Touch-friendly input height (>= 48px) and 16px font to prevent iOS Safari zoom */
-    .lead-form .form-group input,
+    .lead-form .form-group input:not([type="checkbox"]),
     .lead-form .form-group select {
         padding: 0.875rem 1rem;
         font-size: 1rem;
@@ -427,7 +427,7 @@
         font-size: 0.8125rem;
     }
 
-    .lead-form .form-group input,
+    .lead-form .form-group input:not([type="checkbox"]),
     .lead-form .form-group select {
         padding: 0.75rem 0.875rem;
         min-height: 48px;
