@@ -36,6 +36,7 @@ export default function LeadForm({
         grade: '',
         notes: '',
     })
+    const [privacyConsent, setPrivacyConsent] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [error, setError] = useState('')
@@ -173,6 +174,26 @@ export default function LeadForm({
                         onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                         rows={3}
                     />
+                </div>
+
+                <div className="form-group form-group-full privacy-consent">
+                    <label className="consent-label">
+                        <input
+                            type="checkbox"
+                            checked={privacyConsent}
+                            onChange={(e) => setPrivacyConsent(e.target.checked)}
+                            required
+                        />
+                        <span className="consent-text">
+                            אני מסכים/ה לכך שמרכז אריאדנה ישלח לי מיילים שיווקיים ועדכונים רלוונטיים.
+                            <br />
+                            <span className="consent-note">(ניתן להסיר את ההסכמה בכל עת)</span>
+                            {' '}
+                            <a href="https://ariadna-center.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="consent-link">
+                                (מדיניות פרטיות)
+                            </a>
+                        </span>
+                    </label>
                 </div>
 
                 {error && <p className="form-error">{error}</p>}
