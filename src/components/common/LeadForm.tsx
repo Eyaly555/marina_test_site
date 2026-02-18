@@ -121,13 +121,12 @@ export default function LeadForm({
                         />
                     </div>
                     <div className="form-group">
-                        <label>שם משפחה</label>
+                        <label>שם משפחה (אופציונלי)</label>
                         <input
                             type="text"
                             placeholder="שם משפחה של ההורה"
                             value={formData.parentLastName}
                             onChange={(e) => setFormData({ ...formData, parentLastName: e.target.value })}
-                            required
                         />
                     </div>
                 </div>
