@@ -12,11 +12,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(500).json({ error: 'Webhook not configured' })
     }
 
-    // Validate the URL is an n8n webhook address
+    // Validate the URL is an allowed webhook address
     try {
         const url = new URL(webhookUrl)
-        if (!url.hostname.endsWith('.app.n8n.cloud')) {
-            console.error('WEBHOOK_URL is not an n8n address:', url.hostname)
+        const isN8n = url.hostname.endsWith('.app.n8n.cloud')
+        const isZoho = url.hostname.startsWith('flow.zoho.')
+        if (!isN8n && !isZoho) {
+            console.error('WEBHOOK_URL is not an allowed address:', url.hostname)
             return res.status(400).json({ error: 'Invalid webhook URL' })
         }
     } catch {
@@ -32,13 +34,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         })
 
         if (!response.ok) {
-            console.error('n8n webhook responded with status:', response.status)
+            console.error('Webhook responded with status:', response.status)
             return res.status(502).json({ error: 'Webhook request failed' })
         }
 
         return res.status(200).json({ success: true })
     } catch (err) {
-        console.error('Failed to forward request to n8n:', err)
+        console.error('Failed to forward request:', err)
         return res.status(502).json({ error: 'Failed to forward request' })
     }
 }
