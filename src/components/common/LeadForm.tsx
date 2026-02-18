@@ -3,10 +3,11 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, ArrowLeft, Phone } from 'lucide-react'
 import './LeadForm.css'
 
-const gradeOptions = [
-    "א'", "ב'", "ג'", "ד'", "ה'", "ו'",
-    "ז'", "ח'", "ט'", "י'", "יא'", "יב'",
-]
+// ARCHIVED - removed from form per 2026-02 update (keep for easy retrieval)
+// const gradeOptions = [
+//     "א'", "ב'", "ג'", "ד'", "ה'", "ו'",
+//     "ז'", "ח'", "ט'", "י'", "יא'", "יב'",
+// ]
 
 
 interface LeadFormProps {
@@ -32,8 +33,10 @@ export default function LeadForm({
         parentFirstName: '',
         parentLastName: '',
         phone: '',
-        childName: '',
-        grade: '',
+        email: '',
+        // ARCHIVED fields (removed 2026-02):
+        // childName: '',
+        // grade: '',
         notes: '',
     })
     const [privacyConsent, setPrivacyConsent] = useState(false)
@@ -54,8 +57,8 @@ export default function LeadForm({
                     parentFirstName: formData.parentFirstName,
                     parentLastName: formData.parentLastName,
                     phone: formData.phone,
-                    childName: formData.childName,
-                    grade: formData.grade,
+                    email: formData.email,
+                    // ARCHIVED: childName and grade removed 2026-02
                     notes: formData.notes,
                     source: 'landing-page',
                     timestamp: new Date().toISOString(),
@@ -140,6 +143,18 @@ export default function LeadForm({
                     />
                 </div>
 
+                <div className="form-group form-group-full">
+                    <label>אימייל</label>
+                    <input
+                        type="email"
+                        placeholder="example@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                    />
+                </div>
+
+                {/* ARCHIVED fields (removed 2026-02 - uncomment to restore):
                 <div className="form-row">
                     <div className="form-group">
                         <label>שם הילד/ה</label>
@@ -165,6 +180,7 @@ export default function LeadForm({
                         </select>
                     </div>
                 </div>
+                */}
 
                 <div className="form-group form-group-full">
                     <label>הערות (אופציונלי)</label>
